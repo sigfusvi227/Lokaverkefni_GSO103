@@ -123,15 +123,15 @@ order by utgafudagur desc;
 #SELECT diskur.nafn as 'Diskur', flytjandi.nafn as 'Flytjandi', 
 #	flytjandi.faedingardagur as 'Fæðingarár', 
 
-SELECT lag.nafn as 'Lag', lag.lengd as 'Lengd'
-FROM lag
-LIMIT 5;
+#SELECT lag.nafn as 'Lag', lag.lengd as 'Lengd'
+#FROM lag
+#LIMIT 5;
 
 
 
-SELECT tegund_disks as 'Diskur', tegund_disks as 'Tegund'
-FROM diskur
-WHERE nafn
+#SELECT tegund_disks as 'Diskur', tegund_disks as 'Tegund'
+#FROM diskur
+#WHERE nafn
 
 
 
