@@ -132,44 +132,112 @@ VALUES
 (22, "The Way I am", 290, "Mathers", 4, 4),
 (23, "My name is", 267, "Mathers, Andre Young", 4, 4),
 (24, "Take a Chance on Me", 244, "Andersson, Ulvaeus", 3, 3),
-(25, "The Winner Takes it all", 295, "Andersson, Ulvaeus" 3, 3);
- 
+(25, "The Winner Takes it all", 295, "Andersson, Ulvaeus", 3, 3);
+
+
+ #A
 SELECT diskur.nafn as 'Diskur', lag.nafn as 'Lög á diski'
 FROM lag
 JOIN diskur
 ON diskur.nafn = 'Asylum';
 
+
+ #B
 SELECT flytjandi.nafn as 'Flytjandi', lag.nafn as 'Lag eftir flytjanda'
 FROM lag
 JOIN flytjandi
 ON flytjandi.nafn = 'Disturbed';
 
+
+ #C
 SELECT tegund.nafn as 'Tegund', lag.nafn as 'Tegund lags'
 FROM lag
 JOIN tegund
 ON tegund.nafn = 'Rokk';
 
+
+ #D
 SELECT lag.nafn as 'Lag', lag.lengd as 'Lengd'
 FROM lag
 WHERE lengd > 300;
 
+
+ #E
 select diskur.nafn as 'Diskur' , utgafudagur as 'Útgáfudagur' 
 from diskur 
 where utgafudagur >= '2010-01-01' 
 order by utgafudagur desc;
 
-#SELECT diskur.nafn as 'Diskur', flytjandi.nafn as 'Flytjandi', 
-#	flytjandi.faedingardagur as 'Fæðingarár', 
 
-#SELECT lag.nafn as 'Lag', lag.lengd as 'Lengd'
-#FROM lag
-#LIMIT 5;
+#F á eftir að klara
+SELECT diskur.nafn as 'diskur', flytjandi.nafn as 'Flytjandi', utgefandi.nafn as 'Utgefandi'
+from diskur
+inner join tegund ON diskur.tegund_disks = tegund.ID
+inner join flytjandi ON diskur.flytjandi_disks = flytjandi.ID
+inner join utgefandi ON diskur.utgefandi_disks = utgefandi.ID
+ORDER BY utgefandi.nafn ASC
+LIMIT 2;
+
+ #G
+SELECT lag.nafn as 'Lag', lag.lengd as 'Lengd', flytjandi.nafn as 'Flytjandi', utgefandi.nafn as 'Utgefandi'
+FROM lag
+inner join diskur ON lag.diskur = diskur.ID
+inner join flytjandi ON diskur.flytjandi_disks = flytjandi.ID
+inner join utgefandi ON diskur.utgefandi_disks = utgefandi.ID
+ORDER BY lag.lengd DESC
+LIMIT 5;
 
 
 
-#SELECT tegund_disks as 'Diskur', tegund_disks as 'Tegund'
-#FROM diskur
-#WHERE nafn
+ #H
+SELECT tegund.nafn, count(diskur.ID)
+from tegund
+inner join diskur ON tegund.ID = diskur.tegund_disks
+GROUP BY tegund.ID;
 
 
+ #I
+SELECT utgefandi.nafn, min(diskur.utgefandi_disks)
+from utgefandi
+inner join diskur ON diskur.utgefandi_disks = utgefandi.ID;
+
+ #J
+SELECT diskur.nafn as 'diskur', flytjandi.nafn as 'Flytjandi', utgefandi.nafn as 'Utgefandi', diskur.utgafudagur as 'Utgafudagur'
+from diskur
+inner join flytjandi ON diskur.flytjandi_disks = flytjandi.ID
+inner join utgefandi ON diskur.utgefandi_disks = utgefandi.ID
+WHERE utgafudagur between '1998-01-01' and '2017-01-01';
+
+ #K
+SELECT lag.nafn
+from lag
+WHERE lag.nafn like 'A%' or lag.nafn like '%s%';
+
+ #L
+SELECT flytjandi.nafn, timestampdiff(year, flytjandi.faedingardagur, CURDATE()) as 'Aldur', flytjandi.danardagur as 'Danardagur'
+from flytjandi;
+
+ #M
+SELECT AVG(lag.lengd) as 'Meðal lengd í sekondum'
+from lag;
+
+ #N
+SELECT flytjandi.nafn, COUNT(flytjandi.nafn) AS 'Hve margir eiga fleiri en 4 lög'
+FROM lag
+INNER JOIN diskur ON lag.diskur = diskur.ID
+INNER JOIN flytjandi ON diskur.flytjandi_disks = flytjandi.ID
+GROUP BY flytjandi.nafn
+HAVING count(flytjandi.nafn) > 4;
+
+
+
+ #O
+SELECT lag.nafn as 'Lag', flytjandi.nafn as 'Flytjandi'
+FROM lag
+inner join diskur ON lag.diskur = diskur.ID
+inner join flytjandi ON diskur.flytjandi_disks = flytjandi.ID
+WHERE flytjandi.faedingardagur = (
+SELECT Min(flytjandi.faedingardagur)
+FROM flytjandi
+);
 
