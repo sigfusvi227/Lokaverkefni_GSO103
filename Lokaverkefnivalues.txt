@@ -2,11 +2,11 @@ USE 0108952279_lokaverkefni;
 INSERT INTO
 flokkur(ID, nafn)
 VALUES
-(1, "Hljómsveit"),
-(2, "Plötusnúğur"),
+(1, "HljÃ³msveit"),
+(2, "PlÃ¶tusnÃºÃ°ur"),
 (3, "Rappari"),
 (4, "Poppstjarna"),
-(5, "Sólóisti");
+(5, "SÃ³lÃ³isti");
 INSERT INTO
 tegund(ID, nafn)
 VALUES
@@ -29,13 +29,13 @@ VALUES
 INSERT INTO
 flytjandi(ID, nafn, faedingardagur, lysing, danardagur, flokkur_flytjanda)
 VALUES
-(1, "Disturbed", "1994-03-30", "Disturbed er marg platinum şúngarokkshljómsveit sem samanstendur af David Draiman, Dan Donegan, Mike Wengren og John Moyer", NULL, 1),
-(2, "Armin Van Buuren", "1976-12-25","Armin Van Buuren er markverğlaunağur Hollenskur dj og hefur hann veriğ númer 1 á top Dj mag list fimm sinnum.", NULL, 2)
-(3, "ABBA", "1973-10-16", "ABBA er sænsk, margverğlaunuğ og ein af vinsælustu pop hljómsveitum allra tíma", NULL, 1),
-(4, "Eminem", "1972-10-17", "Eminem er Bandarískur rappari og er einn şekktasti í sínum geira", NULL, 3),
-(5, "Páll Óskar", "1970-03-16", "Páll Óskar er íslenskur söngvari, lagahöfundur og plötusnúğur og er şekktastur fyrir ağ syngja ballöğur, diskó, hefğbundin íslensk lög og teknó", NULL, 4),
-(6, "Johnny Cash", "1932-02-26", "Johnny Cash var Bandarískur söngvari og er talin hafa veriğ einn helsti tónlistar áhrifavaldur 19.aldar", "1961-10-21", 5),
-(7, "Fedde Le Grand", "1977-09-7", "Fedde Le Grand er Hollenskur plötusnúğur og er hann şekktastur fyrir lagiğ sitt put your hands up for detroyed", Null, 2),
+(1, "Disturbed", "1994-03-30", "Disturbed er marg platinum Ã¾ÃºngarokkshljÃ³msveit sem samanstendur af David Draiman, Dan Donegan, Mike Wengren og John Moyer", NULL, 1),
+(2, "Armin Van Buuren", "1976-12-25","Armin Van Buuren er markverÃ°launaÃ°ur Hollenskur dj og hefur hann veriÃ° nÃºmer 1 Ã¡ top Dj mag list fimm sinnum.", NULL, 2),
+(3, "ABBA", "1973-10-16", "ABBA er sÃ¦nsk, margverÃ°launuÃ° og ein af vinsÃ¦lustu pop hljÃ³msveitum allra tÃ­ma", NULL, 1),
+(4, "Eminem", "1972-10-17", "Eminem er BandarÃ­skur rappari og er einn Ã¾ekktasti Ã­ sÃ­num geira", NULL, 3),
+(5, "PÃ¡ll Ã“skar", "1970-03-16", "PÃ¡ll Ã“skar er Ã­slenskur sÃ¶ngvari, lagahÃ¶fundur og plÃ¶tusnÃºÃ°ur og er Ã¾ekktastur fyrir aÃ° syngja ballÃ¶Ã°ur, diskÃ³, hefÃ°bundin Ã­slensk lÃ¶g og teknÃ³", NULL, 4),
+(6, "Johnny Cash", "1932-02-26", "Johnny Cash var BandarÃ­skur sÃ¶ngvari og er talin hafa veriÃ° einn helsti tÃ³nlistar Ã¡hrifavaldur 19.aldar", "1961-10-21", 5),
+(7, "Fedde Le Grand", "1977-09-7", "Fedde Le Grand er Hollenskur plÃ¶tusnÃºÃ°ur og er hann Ã¾ekktastur fyrir lagiÃ° sitt put your hands up for detroyed", Null, 2);
 INSERT INTO
 Diskur(ID, nafn, utgafudagur, tegund_disks, flytjandi_disks, utgefandi_disks)
 VALUES
@@ -43,7 +43,7 @@ VALUES
 (2, "Intense", "2013-05-03", 2, 2, 2),
 (3, "Gold: Greatest Hits", "1992-09-21", 3, 3, 3),
 (4, "Curtain Call: The Hits", "2005-12-06", 4, 4, 4),
-(5, "Allt fyrir ástina", "2007-11-07", 5, 5, 5),
+(5, "Allt fyrir Ã¡stina", "2007-11-07", 5, 5, 5),
 (6, "Now Here's Johnny Cash", "1961-10-21", 6, 6),
 (7, "Output", "2009-09-14", 7, 7, 2);
 INSERT INTO 
@@ -57,16 +57,16 @@ VALUES
 (6, "Waiting for the Night", 269, "Armin Van Buuren, Benno de Goeij, Fiora Cutler", 2, 2),
 (7, "Dancing Queen", 232, "Andersson, Stig Anderson, Ulvaeus", 3, 3),
 (8, "Mamma Mia", 213, "Andersson, Anderson, Ulvaeus", 3, 3),
-(9, "Super Trouper", 254, "Benny Andersson, Björn Ulvaeus", 3, 3),
+(9, "Super Trouper", 254, "Benny Andersson, BjÃ¶rn Ulvaeus", 3, 3),
 (10, "FACK", 206, "Marshell Mathers, Luis, Resto, Steve King", 4, 4),
 (11, "Stan", 404, "Mathers, Dido Armstrong, Paul Herman", 4, 4),
 (12, "Lose Yourself", 326, "Mathers, Jeff Bass, Resto", 4, 4),
-(13, "Allt fyrir ástina", 214, "Páll Óskar", 5, 5),
-(14, "Şú komst viğ hjartağ í mér", 304, "Páll Óskar", 5, 5),
-(15, "Betra líf", 220, "Páll Óskar", 5, 5),
+(13, "Allt fyrir Ã¡stina", 214, "PÃ¡ll Ã“skar", 5, 5),
+(14, "ÃÃº komst viÃ° hjartaÃ° Ã­ mÃ©r", 304, "PÃ¡ll Ã“skar", 5, 5),
+(15, "Betra lÃ­f", 220, "PÃ¡ll Ã“skar", 5, 5),
 (16, "Sugartime", 108, "Odis Echols, Charlie Phillips", 6, 6),
 (17, "Down the street to 301", 126, "Jack Clement", 6, 6),
 (18, "Life Goes On", 122, "Cash, Clement", 6, 6),
 (19, "Feel alive", 251, "Will.I.Am, Fedde le Grand", 7, 7),
 (20, "Shotgun", 378, "Camille Jones, Fedde le Grand", 7, 7),
-(21, "Let Me Be Real", "
+(21, "Let Me Be Real", 200, "Fedde le Grand, Mitch Kroon, Robin M, 7, 7);
