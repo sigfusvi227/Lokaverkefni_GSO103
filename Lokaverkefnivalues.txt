@@ -27,25 +27,25 @@ VALUES
 (5, "Paul Oscar Productions"),
 (6, "Sun Records");
 INSERT INTO
-flytjandi(ID, nafn, faedingardagur, lysing, danardagur, flokkur_flytjanda)
+flytjandi(ID, nafn, faedingardagur, land, lysing, danardagur, flokkur_flytjanda)
 VALUES
-(1, "Disturbed", "1994-03-30", "Disturbed er marg platinum þúngarokkshljómsveit sem samanstendur af David Draiman, Dan Donegan, Mike Wengren og John Moyer", NULL, 1),
-(2, "Armin Van Buuren", "1976-12-25","Armin Van Buuren er markverðlaunaður Hollenskur dj og hefur hann verið númer 1 á top Dj mag list fimm sinnum.", NULL, 2),
-(3, "ABBA", "1973-10-16", "ABBA er sænsk, margverðlaunuð og ein af vinsælustu pop hljómsveitum allra tíma", NULL, 1),
-(4, "Eminem", "1972-10-17", "Eminem er Bandarískur rappari og er einn þekktasti í sínum geira", NULL, 3),
-(5, "Páll Óskar", "1970-03-16", "Páll Óskar er íslenskur söngvari, lagahöfundur og plötusnúður og er þekktastur fyrir að syngja ballöður, diskó, hefðbundin íslensk lög og teknó", NULL, 4),
-(6, "Johnny Cash", "1932-02-26", "Johnny Cash var Bandarískur söngvari og er talin hafa verið einn helsti tónlistar áhrifavaldur 19.aldar", "1961-10-21", 5),
-(7, "Fedde Le Grand", "1977-09-7", "Fedde Le Grand er Hollenskur plötusnúður og er hann þekktastur fyrir lagið sitt put your hands up for detroyed", Null, 2);
+(1, "Disturbed", "1994-03-30", "Bandaríkin", "Disturbed er marg platinum þúngarokkshljómsveit sem samanstendur af David Draiman, Dan Donegan, Mike Wengren og John Moyer", NULL, 1),
+(2, "Armin Van Buuren", "1976-12-25", "Holland", "Armin Van Buuren er markverðlaunaður Hollenskur dj og hefur hann verið númer 1 á top Dj mag list fimm sinnum.", NULL, 2),
+(3, "ABBA", "1973-10-16", "Svíþjóð", "ABBA er sænsk, margverðlaunuð og ein af vinsælustu pop hljómsveitum allra tíma", NULL, 1),
+(4, "Eminem", "1972-10-17", "Bandaríkin", "Eminem er Bandarískur rappari og er einn þekktasti í sínum geira", NULL, 3),
+(5, "Páll Óskar", "1970-03-16", "Ísland", "Páll Óskar er íslenskur söngvari, lagahöfundur og plötusnúður og er þekktastur fyrir að syngja ballöður, diskó, hefðbundin íslensk lög og teknó", NULL, 4),
+(6, "Johnny Cash", "1932-02-26", "Bandaríkin", "Johnny Cash var Bandarískur söngvari og er talin hafa verið einn helsti tónlistar áhrifavaldur 19.aldar", "1961-10-21", 5),
+(7, "Fedde Le Grand", "Holland",  "1977-09-7", "Fedde Le Grand er Hollenskur plötusnúður og er hann þekktastur fyrir lagið sitt put your hands up for detroyed", Null, 2);
 INSERT INTO
-Diskur(ID, nafn, utgafudagur, tegund_disks, flytjandi_disks, utgefandi_disks)
+Diskur(ID, nafn, utgafudagur, seld_eintok, tegund_disks, flytjandi_disks, utgefandi_disks)
 VALUES
-(1, "Asylum", "2010-08-31", 1, 1, 1),
-(2, "Intense", "2013-05-03", 2, 2, 2),
-(3, "Gold: Greatest Hits", "1992-09-21", 3, 3, 3),
-(4, "Curtain Call: The Hits", "2005-12-06", 4, 4, 4),
-(5, "Allt fyrir ástina", "2007-11-07", 5, 5, 5),
-(6, "Now Here's Johnny Cash", "1961-10-21", 6, 6),
-(7, "Output", "2009-09-14", 7, 7, 2);
+(1, "Asylum", "2010-08-31", 179000, 1, 1, 1),
+(2, "Intense", "2013-05-03", 3000000, 2, 2, 2),
+(3, "Gold: Greatest Hits", 30000000, "1992-09-21", 3, 3, 3),
+(4, "Curtain Call: The Hits", 13502500, "2005-12-06", 4, 4, 4),
+(5, "Allt fyrir ástina", "2007-11-07",20000, 5, 5, 5),
+(6, "Now Here's Johnny Cash", "1961-10-21",1000000, 6, 6),
+(7, "Output", "2009-09-14",100000, 7, 7, 2);
 INSERT INTO 
 lag(ID, nafn, lengd, texti, tegund, diskur)
 VALUES
