@@ -128,7 +128,11 @@ VALUES
 (18, "Life Goes On", 122, "Cash, Clement", 6, 6),
 (19, "Feel alive", 251, "Will.I.Am, Fedde le Grand", 7, 7),
 (20, "Shotgun", 378, "Camille Jones, Fedde le Grand", 7, 7),
-(21, "Let Me Be Real", 200, "Fedde le Grand, Mitch Kroon, Robin M", 7, 7);
+(21, "Let Me Be Real", 200, "Fedde le Grand, Mitch Kroon, Robin M", 7, 7),
+(22, "The Way I am", 290, "Mathers", 4, 4),
+(23, "My name is", 267, "Mathers, Andre Young", 4, 4),
+(24, "Take a Chance on Me", 244, "Andersson, Ulvaeus", 3, 3),
+(25, "The Winner Takes it all", 295, "Andersson, Ulvaeus" 3, 3);
  
 SELECT diskur.nafn as 'Diskur', lag.nafn as 'Lög á diski'
 FROM lag
