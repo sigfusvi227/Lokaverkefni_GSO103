@@ -8,3 +8,9 @@
 ## 4 mai
 4. Sigfús er hálfnaður með SELECT skipunina
 5. Vytautas Er nánast búinn með öll Values
+## 8 mai
+Við að lokum náðum að klára okkar part, Vytautas var bæuinn með values og 7 fyrirspurnir fyrir verkefnið
+og Sigfús náði að klára allar fyrirspurnirnar frá verkefninu sjálum. 
+Núna er allt komið inná Innu
+
+Við þökkum fyrir önnina
