@@ -13,9 +13,10 @@ CREATE TABLE flytjandi
 	ID INT(11) PRIMARY KEY,
     nafn varchar(255),
     faedingardagur DATE NOT NULL,
+    tjoderni VARCHAR(255),
     lysing TEXT,
     danardagur DATE NULL,
-    flokkur_flytjanda INT,
+    flokkur_flytjanda INT,	
     FOREIGN KEY (flokkur_flytjanda) REFERENCES flokkur(ID)
 );
 
@@ -36,6 +37,7 @@ CREATE TABLE diskur
 	ID INT PRIMARY KEY,
     nafn varchar(255),
     utgafudagur DATE,
+    seld_eintok INT,
     tegund_disks int,
     flytjandi_disks int,
     utgefandi_disks	int,
