@@ -73,4 +73,4 @@ VALUES
 (22, "The Way I am", 290, "Mathers", 4, 4),
 (23, "My name is", 267, "Mathers, Andre Young", 4, 4),
 (24, "Take a Chance on Me", 244, "Andersson, Ulvaeus", 3, 3),
-(25, "The Winner Takes it all", 295, "Andersson, Ulvaeus" 3, 3);
+(25, "The Winner Takes it all", 295, "Andersson, Ulvaeus", 3, 3);
