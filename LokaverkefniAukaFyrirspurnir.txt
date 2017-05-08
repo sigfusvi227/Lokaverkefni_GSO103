@@ -1,0 +1,54 @@
+Fyrirspurnir sem við bjuggum til
+1. Finna hvaða diskur seldi flest eintök og hver flytjandinn var
+SELECT  diskur.nafn AS "Nafn", diskur.seld_eintok AS "Seld eintök", flytjandi.nafn AS "Flytjandi"
+FROM diskur
+JOIN flytjandi
+ON diskur.flytjandi_disks = flytjandi.ID
+WHERE diskur.seld_eintok = (   
+    SELECT Max(diskur.seld_eintok)
+    FROM diskur
+);
+
+2. Birta fjölda seldra eintaka af disk og tegund disks
+SELECT diskur.seld_eintok AS "Seld eintök", tegund.nafn AS "Tegund disks"
+FROM diskur
+JOIN tegund
+ON diskur.tegund_disks = tegund.ID;
+
+3. Birta alla diska sem seldu meira en 1 milljón eintaka og útgefanda þess
+SELECT diskur.nafn AS "Nafn", diskur.seld_eintok AS "Seld eintök", utgefandi.nafn AS "Útgefandi disks"
+FROM diskur
+JOIN utgefandi
+ON diskur.utgefandi_disks = utgefandi.ID
+WHERE diskur.seld_eintok >= 1000000;
+
+4. Finna út hversu marga diska bandaríkjamenn seldu
+SELECT Sum(diskur.seld_eintok) AS "Fjöldi seldra Bandarískra diska"
+FROM diskur
+JOIN flytjandi
+ON diskur.flytjandi_disks = flytjandi.ID
+WHERE flytjandi.land = "Bandaríkin";
+
+5. Finna út hvaðan hver diskur er (Reiknað með því að hver diskur er frá sama landi og flytjandinn) flokkað eftir landi
+SELECT diskur.nafn AS "Nafn", flytjandi.land AS "Land"
+FROM diskur
+JOIN flytjandi
+ON diskur.flytjandi_disks = flytjandi.ID
+ORDER BY flytjandi.land;
+
+6. Finna þjóðerni hvers flytjanda og útgefanda sem vann með honum 
+SELECT flytjandi.nafn AS "Nafn", flytjandi.land AS "Land", utgefandi.nafn AS "Útgefandi"
+FROM flytjandi
+JOIN diskur
+ON diskur.flytjandi_disks = flytjandi.ID
+JOIN utgefandi
+ON diskur.utgefandi_disks = utgefandi.ID;
+
+7. Finna út hversu mörg lög koma frá hverju landi
+SELECT flytjandi.land AS "Land", COUNT(lag.nafn) AS "Fjöldi laga"
+FROM flytjandi
+JOIN diskur
+ON diskur.flytjandi_disks = flytjandi.ID
+JOIN lag
+ON lag.diskur = diskur.ID
+GROUP BY flytjandi.land;
