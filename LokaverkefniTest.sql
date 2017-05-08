@@ -13,7 +13,7 @@ CREATE TABLE flytjandi
 	ID INT(11) PRIMARY KEY,
     nafn varchar(255),
     faedingardagur DATE NOT NULL,
-    tjoderni VARCHAR(255),
+    land VARCHAR(255),
     lysing TEXT,
     danardagur DATE NULL,
     flokkur_flytjanda INT,	
